@@ -3,6 +3,82 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const title = 'Página de inicio';
 ---
 
-<BaseLayout title={title}>
+	<BaseLayout title={title}>
+	<h1>Bienvenido a mi portafolio</h1>
 	<h2>Esto esta en el index</h2>
+	<section id="sobre-mi">
+		<h3>Sobre Mí</h3>
+		<img src="path/to/your-photo.jpg" alt="Mi Foto">
+		<p>
+			Hola, soy [Tu Nombre], un [Tu Profesión] basado en [Tu Ubicación]. Me especializo en [menciona tus áreas de especialización]. Graduado de [Tu Educación], he trabajado en [Tu Experiencia] y estoy apasionado por [algo que te apasione profesionalmente].
+		</p>
+		<p>
+			En mi carrera, he [describir logros o proyectos importantes]. Además de mi trabajo, disfruto [tus hobbies o intereses personales].
+		</p>
+		<p>
+			Para más información sobre mi trabajo o si deseas contactarme, puedes encontrarme en [LinkedIn, Twitter, etc.] o enviarme un correo a [Tu Email].
+		</p>
+	</section>
+	
+	<section id="mis-proyectos">
+		<h3>Proyectos Destacados</h3>
+		<div class="gallery">
+			<div class="gallery-item">
+				<img src="path/to/image1.jpg" alt="Descripción del Proyecto 1">
+				<div class="description">
+					<h4>Proyecto 1</h4>
+					<p>Pequeña descripción del proyecto. <a href="link-to-more-info">Más info</a></p>
+				</div>
+			</div>
+			<div class="gallery-item">
+				<img src="path/to/image2.jpg" alt="Descripción del Proyecto 2">
+				<div class="description">
+					<h4>Proyecto 2</h4>
+					<p>Pequeña descripción del proyecto. <a href="link-to-more-info">Más info</a></p>
+				</div>
+			</div>
+			<!-- Repite bloques similares para otros proyectos -->
+		</div>
+	</section>
+	
+	<section id="mis-habilidades">
+		<h3>Mis habilidades</h3>
+		<p>
+			Soy un desarrollador apasionado con una sólida base en tecnologías web y de software. Aquí están algunas de las habilidades que he adquirido y perfeccionado a lo largo de mi carrera:
+		</p>
+		<ul>
+			<li><strong>HTML y CSS:</strong> Capacidad para crear estructuras de página robustas y estilos visuales atractivos y responsivos.</li>
+			<li><strong>JavaScript:</strong> Experiencia en añadir interactividad a las páginas web, manejar eventos, y realizar solicitudes AJAX.</li>
+			<li><strong>Python:</strong> Fuerte en programación backend, procesamiento de datos, y desarrollo de aplicaciones de escritorio con Tkinter.</li>
+			<li><strong>C#:</strong> Conocimientos básicos en el desarrollo de aplicaciones y software, especialmente en entornos .NET.</li>
+			<li><strong>Astro:</strong> Utilizando Astro para construir y optimizar sitios web modernos, aprovechando su rendimiento y capacidades de integración.</li>
+		</ul>
+	</section>
+	
+	<section id="contactame">
+		<form action="URL_DESTINO" method="POST">
+			<fieldset>
+				<legend>Formulario de contacto</legend>
+				
+				<label for="nombre">Nombre:
+					<input type="text" id="nombre" name="nombre" required>
+				</label>
+				<br>
+				<label for="email">Correo electrónico:
+					<input type="email" id="email" name="email" required>
+				</label>
+				<br>
+				<label for="telefono">Teléfono:
+					<input type="tel" id="telefono" name="telefono">
+				</label>
+				<br>
+				<label for="mensaje">Mensaje:
+					<textarea id="mensaje" name="mensaje" required></textarea>
+				</label>
+				<br>
+				<button type="submit">Enviar</button>
+			</fieldset>
+		</form>
+	</section>
+	
 </BaseLayout>
